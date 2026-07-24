@@ -19,10 +19,13 @@ function Contact(){
                 setMessageState('sent')
                 setTimeout(() => {
                     setMessageState('')
-                }, 2500);
+                }, 2500)
             },
             (result) => {
                 setMessageState('notSent')
+                setTimeout(() => {
+                    setMessageState('')
+                },2500)
             }
         )   
         form.current.reset()
