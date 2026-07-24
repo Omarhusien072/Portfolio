@@ -9,7 +9,7 @@ const firaCode = Fira_Code({
 
 export const metadata: Metadata = {
   title: "Portfolio",
-  description: "Terminal Like Portfolio",
+  description: "Interactive Terminal-Style Frontend Portfolio",
 };
 
 export default function RootLayout({
