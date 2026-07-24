@@ -121,9 +121,14 @@ function Terminal({Directory, logs, onCommandExecute}: TerminalProps){
                                             type="button"
                                             onClick={() => {
                                                 if (terminalRef.current) {
-                                                    terminalRef.current.value = cmd.command;
-                                                    onCommandExecute(cmd.command);
-                                                    terminalRef.current.value = '';
+                                                    if (cmd.command.includes("dir_name") || cmd.command.startsWith("cd ")) {
+                                                        terminalRef.current.value = "cd ";
+                                                        terminalRef.current.focus();
+                                                    } else {
+                                                        terminalRef.current.value = cmd.command;
+                                                        onCommandExecute(cmd.command);
+                                                        terminalRef.current.value = '';
+                                                    }
                                                 }
                                             }}
                                             className="text-[0.65rem] bg-secondary/90 hover:bg-primary/20 hover:border-primary/60 border border-border/80 px-2.5 py-1 rounded text-primary transition-colors cursor-pointer active:scale-95"
