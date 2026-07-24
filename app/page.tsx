@@ -104,7 +104,7 @@ function Home() {
           {
             id: crypto.randomUUID(),
             type: "help",
-            text: "sh: navigation: cd <module_name>",
+            text: "sh: navigation: cd module_name",
           },
         ]);
         setLogs((prevLogs) => [
