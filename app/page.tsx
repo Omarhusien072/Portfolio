@@ -206,7 +206,7 @@ function Home() {
   };
 
   return (
-    <main className="flex flex-col h-screen w-full p-4 font-mono">
+    <main className="flex flex-col min-h-dvh w-full p-4 font-mono pb-24 md:pb-28">
       <RightSidePanel logs={logs} />
       <MainSections currentSections={orderedSections} />
       <Terminal Directory={directoryVal} onCommandExecute={onCommandExecute} logs={logs} />
