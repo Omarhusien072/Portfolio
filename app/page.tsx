@@ -96,7 +96,7 @@ function Home() {
           {
             id: crypto.randomUUID(),
             type: "help",
-            text: `sh: available modules : ${sectionsCommands.map((sectionCommand) => sectionCommand.command).join(", ")}`,
+            text: `sh: available modules: ${sectionsCommands.map((sectionCommand) => sectionCommand.command).join(", ")}`,
           },
         ]);
         setLogs((prevLogs) => [
